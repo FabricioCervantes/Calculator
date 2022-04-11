@@ -23,14 +23,27 @@ body {
     border: 2px solid black;
 }
 
-.result {
+.screen {
     margin-top: 8px;
     border-radius: 8px;
     height: 125px;
     width: 385px;
     background-color: #FFF6EA;
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    font-size: 40px;
+}
 
+.operation,
+.result {
+    padding: 8px 16px;
+}
+
+.operation {
+    font-size: 24px;
 }
 
 .erase {
