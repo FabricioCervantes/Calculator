@@ -44,13 +44,8 @@ function numbers(n) {
         if (cont === 0) {
             num1 += n;
             screenOperation.textContent = num1;
-        } else if (cont === 1) {
+        } else if (cont >= 1) {
             num2 += n;
-            screenOperation.textContent = num1 + " " + operator + " " + num2;
-            operation();
-        } else if (cont >= 2) {
-            num2 += n;
-            screenOperation.textContent = num1 + " " + operator + " " + num2;
             operation();
         }
     }
@@ -77,6 +72,7 @@ function operationType(value) {
 
 // Do the operation
 function operation() {
+    screenOperation.textContent = num1 + " " + operator + " " + num2;
     switch (operator) {
         case "+":
             aux1 = parseFloat(num1);
@@ -125,7 +121,6 @@ function deleteCharacter() {
     } else if (cont >= 1) {
         num2 = num2.slice(0, -1);
         screenOperation.textContent = num1 + " " + operator + " " + num2;
-
     }
 
 }
